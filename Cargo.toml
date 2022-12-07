@@ -31,7 +31,7 @@ futures = "0.3.21"
 futures-timer = "3.0.2"
 ipfs-sqlite-block-store = "0.13.0"
 lazy_static = "1.4.0"
-libipld ={ssh= "ssh://git@github.com:timoCasti/libipld-1.git", version ="0.14.0"}
+libipld = "0.14.0"
 libp2p-bitswap = "0.24.0"
 libp2p-broadcast = "0.11.0"
 names = "0.13.0"
@@ -76,4 +76,5 @@ tracing-subscriber = { version = "0.3.9", features = ["env-filter"] }
 [profile.release]
 debug = true
 
-
+[patch.crates-io]
+libipld= {git= "https://github.com/timoCasti/libipld-1.git"}
