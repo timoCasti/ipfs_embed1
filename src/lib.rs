@@ -60,7 +60,7 @@ use futures::{stream::Stream, Future};
 use libipld::{
     codec::References,
     error::BlockNotFound,
-    store::{Store, StoreParams},
+    store::{ StoreParams, Store},
     Ipld, Result,
 };
 use libp2p::identity::ed25519::{Keypair, PublicKey};
@@ -454,6 +454,7 @@ where
 {
     type Params = P;
     type TempPin = Arc<Mutex<TempPin>>;
+    
 
     fn create_temp_pin(&self) -> Result<Self::TempPin> {
         Ok(Arc::new(Mutex::new(Ipfs::create_temp_pin(self)?)))

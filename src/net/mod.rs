@@ -556,7 +556,7 @@ impl NetworkService {
     }
 }
 
-async fn poll_swarm<P: StoreParams>(
+async fn poll_swarm<P: libipld::store::StoreParams>(
     mut cmd_rx: Receiver<NetworkCommand>,
     cmd_tx: Sender<NetworkCommand>,
     mut swarm: Swarm<NetworkBackendBehaviour<P>>,
