@@ -12,11 +12,15 @@ async-std = { version = "1.11.0", features = ["attributes"] }
 chrono = "0.4.19"
 futures = "0.3.24"
 ipfs-embed = { path = ".." }
-libipld = { ssh = "ssh://git@gitlab.com:ColombaLink/dev/dapsi/public/dybli/core/deps/libipld.git" }
-multihash = { ssh = "git@gitlab.com:ColombaLink/dev/dapsi/public/dybli/core/deps/multihash.git" }
+libipld = "0.14.0"
+multihash = "0.17.0"
 parking_lot = "0.11.2"
 serde = { version = "1.0.136", features = ["derive"] }
 serde_json = "1.0.79"
 structopt = "0.3.26"
 tracing = "0.1.32"
 tracing-subscriber = { version = "0.3.9", features = ["env-filter"] }
+
+[patch.crates-io]
+multihash = { git = "https://github.com/timoCasti/multihash.git"}
+libipld = { git = "https://github.com/timoCasti/libipld-1.git"}
